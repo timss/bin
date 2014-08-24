@@ -1,4 +1,4 @@
 bin
 ===
 
-Assorted scripts and binaries.
+Old and new assorted scripts and binaries.
