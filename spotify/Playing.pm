@@ -20,11 +20,13 @@ sub get_now_playing() {
         exit 1;
     }
 
-    my $artist = ($metadata[21] =~ /\"(.*)\"/)[0]; # string "Artist"
-    my $album  = ($metadata[16] =~ /\"(.*)\"/)[0]; # variant string "Album"
-    my $song   = ($metadata[38] =~ /\"(.*)\"/)[0]; # variant string "Song"
+    my $artist = ($metadata[21] =~ /\"(.*)\"/)[0];
+    my $album  = ($metadata[16] =~ /\"(.*)\"/)[0];
+    my $song   = ($metadata[38] =~ /\"(.*)\"/)[0];
+    my $url    = "http://open.spotify.com/track/" .
+                 ($metadata[46] =~ /\"spotify:track:(.*)\"/)[0];
 
-    return ($artist, $album, $song);
+    return ($artist, $album, $song, $url);
 }
 
 1;
