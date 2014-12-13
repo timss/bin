@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# download videos from youtube, convert to mp3 using ffmpeg/avconv
+
+if [ "$#" -lt 1 ]; then
+    echo "Usage: $0 url [url...]"
+    exit
+fi
+
+youtube-dl -i -x --audio-quality 0 --audio-format mp3 $@

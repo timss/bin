@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# scrape YouTube urls from a webpage
+
+if [ "$#" -lt 1 ]; then
+    echo "Usage: $0 url [url...]"
+    exit
+fi
+
+curl -s $@ | html2text | grep -Eo "http.*youtu.*\s?" | sort -u
