@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# dump.sh: dump a list of files or directories to a remove destination
+# dump.sh: dump a list of files or directories to a remote destination
 
 REMOTE_DIR=""
 CHMOD=""
