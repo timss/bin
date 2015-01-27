@@ -8,9 +8,9 @@ i=0
 
 if [ -f $HOME/.dumprc ]; then
     # add dump config, e.g:
-    # REMOTE_HOST="domain.com"
+    # REMOTE_HOST="domain.com/"
     # REMOTE_PATH="/var/www/dump/"
-    # REMOTE_URL="http://dump.domain.com"
+    # REMOTE_URL="http://dump.domain.com/"
     # CHMOD="--chmod=Du=rwx,Dg=rx,Do=rx,Fu=rw,Fg=r,Fo=r"
     source $HOME/.dumprc
 fi
