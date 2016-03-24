@@ -5,7 +5,7 @@
 
 set -e
 
-skip=${1:-""}
+skip=${1:-"localhost"}
 default_if=$(ip route list | awk '/^default/ {print $5}')
 subnet=$(ip -o -f inet addr show $default_if | awk '{print $4}')
 hosts=$(nmap -sn $subnet | awk -F '[ ().]' '/for [a-z]+/ {print $5}' | grep -v $skip)
